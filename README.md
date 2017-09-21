@@ -45,5 +45,9 @@ Clear the display and turn off all segments
 	- I2C (A4/A5)
 - ESP8266 Module (<a href="http://www.embeddedadventures.com/esp8266_wifi_module_wrl-esp7.html">ESP7</a> and <a href="http://www.embeddedadventures.com/esp8266_wifi_module_wrl-esp12e.html">ESP12</a>)
 	- I2C (IO4/IO5)
-- ESP32-based board
+- <a href="http://www.embeddedadventures.com/esp32_development_platform_PLT-ESP32-01.html">ESP32 Module</a>
 	- I2C (IO21/IO22)
+
+## To Do List ##
+- SAMD21-based board compatibility
+- include UART Serial interface
