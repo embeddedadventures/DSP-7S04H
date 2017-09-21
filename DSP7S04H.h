@@ -41,8 +41,8 @@ Contact us at source [at] embeddedadventures.com
 #ifndef __DSP7S04H_H
 #define __DSP7S04H_H
 
+#include <Arduino.h>
 #include <Wire.h>
-#include <inttypes.h>
 
 #define EA_DSP7S04_ADDR_DEFAULT 0x32
 

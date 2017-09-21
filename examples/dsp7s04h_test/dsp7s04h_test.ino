@@ -33,42 +33,53 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include <Wire.h>
 #include <DSP7S04H.h>
 
+
+//Uncomment the line below if using a SAMD21-based board
+//#define USING_SAMD21
+
+#ifdef USING_SAMD21
+	#define SERIAL	SerialUSB
+#else
+	#define SERIAL	Serial
+#endif
+
 void setup () {
+  SERIAL.begin(115200);
+  while (!SERIAL) {	}
   Wire.begin();
-  Serial.begin(115200);
-  Serial.println("Embedded Adventures DSP-7S04B demo\n\r");
+  SERIAL.println("Embedded Adventures DSP-7S04B demo\n\r");
   dsp7s04h.setAddress(EA_DSP7S04_ADDR_DEFAULT);
 }
 
 void loop() {
-  Serial.println("Clearing...");
+  SERIAL.println("Clearing...");
   dsp7s04h.clearDisplay();
   delay(1000);
-  Serial.println("Print str...");
+  SERIAL.println("Print str...");
   dsp7s04h.println("1234");
   delay(1000);
-  Serial.println("Setting level at 127");
+  SERIAL.println("Setting level at 127");
   dsp7s04h.setBrightness(127);
   delay(1000);
-  Serial.println("Setting level at 10");
+  SERIAL.println("Setting level at 10");
   dsp7s04h.setBrightness(10);
   delay(1000);
-  Serial.println("Setting level at 255");
+  SERIAL.println("Setting level at 255");
   dsp7s04h.setBrightness(255);
   delay(1000);
-  Serial.println("Dots on");
+  SERIAL.println("Dots on");
   dsp7s04h.setDot(0);
   dsp7s04h.setDot(1);
   dsp7s04h.setDot(2);
   dsp7s04h.setDot(3);
   delay(1000);
-  Serial.println("Dots off");
+  SERIAL.println("Dots off");
   dsp7s04h.clearDot(0);
   dsp7s04h.clearDot(1);
   dsp7s04h.clearDot(2);
   dsp7s04h.clearDot(3);
   delay(1000);
-  Serial.println("Set raw segments");
+  SERIAL.println("Set raw segments");
   dsp7s04h.setRaw(0, 0xFFFF);
   dsp7s04h.setRaw(1, 0xFFFF);
   dsp7s04h.setRaw(2, 0xFFFF);

@@ -73,9 +73,6 @@ uns8 count;
     Wire.write(CMD_PRINT);
 
     for( count = 0; count < 4; count++ ) {
-      if (str[count] == 0) {
-        break;
-      }
       Wire.write(str[count]);
     }
     Wire.endTransmission();

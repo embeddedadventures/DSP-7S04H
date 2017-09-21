@@ -1,7 +1,5 @@
 # DSP-7S04H
 
-4-digit 7 segment red LED display 
-
 A great Arduino library to communicate with the [DSP-7S04H 7 segment 4 digit 2.3" display](http://www.embeddedadventures.com/4_digit_7_segment_led_display_dsp-7s04h-red.html) from Embedded Adventures
 
 ## Using the library ##
@@ -47,5 +45,5 @@ Clear the display and turn off all segments
 	- I2C (A4/A5)
 - ESP8266 Module (<a href="http://www.embeddedadventures.com/esp8266_wifi_module_wrl-esp7.html">ESP7</a> and <a href="http://www.embeddedadventures.com/esp8266_wifi_module_wrl-esp12e.html">ESP12</a>)
 	- I2C (IO4/IO5)
-- SAMD21-based Arduino board
-	- I2C
+- ESP32-based board
+	- I2C (IO21/IO22)
