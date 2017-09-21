@@ -38,8 +38,8 @@ Contact us at source [at] embeddedadventures.com
 // This version works over I2C
 //
 
-#ifndef __DSP7204B_H
-#define __DSP7204B_H
+#ifndef __DSP7S04H_H
+#define __DSP7S04H_H
 
 #include <Wire.h>
 #include <inttypes.h>
